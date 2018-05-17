@@ -1,3 +1,10 @@
+"""
+Control the training process
+
+it has three main parts:
+    1. loss function: defining the loss
+    2. train op function: defining the train process(eg. parameters updata, learning rate, model save..)
+"""
 import tensorflow as tf
 import time
 from datetime import datetime

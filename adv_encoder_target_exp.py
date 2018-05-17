@@ -1,3 +1,20 @@
+"""
+Builds the Adversarial example generative network
+
+Summary of available functions:
+    
+    # Train or evaluate a AEGN
+    adv_net_exp(...)
+
+    # Generate a dictionary which be used to alter the mode of the target network. 
+    # Mainly be used to set target network in eval mode 
+    # where the target network's dropout and batchnormalization is in inference status
+    mode_feed()
+
+    #  compute adversarial examples by using output_images
+    adv_generate(sess, output_images, x, X, feed, batch_size)
+"""
+
 from mdt_cifar10_train import train_adv_encoder, adv_loss, create_train_op
 from MDT_model import make_vgg16_model
 from adv_net import adv_net, sym_adv_net, adv_net_mask, adv_train_net, adv_target_net, adv_target_net2, adv_target_net3
